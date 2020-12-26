@@ -40,7 +40,7 @@ static char peekNext() {
 
 static bool match(char expected) {
   if (isAtEnd()) return false;
-  if (scanner.current != expected) return false;
+  if (*scanner.current != expected) return false;
 
   scanner.current++;
   return true;
