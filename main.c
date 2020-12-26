@@ -10,15 +10,15 @@
 static void repl() {
   char line[1024];
   for (;;) {
-    printf("> \a");
+    printf("> ");
 
     if (!fgets(line, sizeof(line), stdin)) {
       printf("\n");
       break;
     }
-  }
 
-  interpret(line);
+    interpret(line);
+  }
 }
 
 static char* readFile(const char* path) {
